@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from planlos.passwordgen import Password_Generator
-from flaskext.mail import Message
+from flask.ext.mail import Message
 from planlos.extensions import mail, db
 from documents import User, Group, Group_Admin
 from documents import User_Exists_Exception, Group_Exists

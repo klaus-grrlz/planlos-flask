@@ -2,7 +2,7 @@
 from flask import (Blueprint, g, render_template,
                    request, redirect, url_for, abort)
 from flask import current_app as app
-from flaskext.login import login_required, current_user
+from flask.ext.login import login_required, current_user
 from planlos.documents import User, Event
 from planlos.forms import Event_Form
 from planlos.extensions import db

@@ -1,7 +1,7 @@
 # coding: utf-8
-from flaskext.mail import Mail
-from flaskext.mongokit import MongoKit
-from flaskext.login import LoginManager
+from flask.ext.mail import Mail
+from flask.ext.mongokit import MongoKit
+from flask.ext.login import LoginManager
 
 login_manager = LoginManager()
 db = MongoKit()

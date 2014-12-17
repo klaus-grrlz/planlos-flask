@@ -12,7 +12,7 @@ from planlos.webservices import webservice
 from planlos.extensions import mail, db, login_manager
 from planlos.documents import User, Group
 import flask_sijax
-from flaskext.login import user_logged_in
+from flask.ext.login import user_logged_in
 import datetime
 
 from template_widgets import widget

@@ -1,9 +1,9 @@
 # coding: utf-8
 
 from datetime import datetime
-from flaskext.mongokit import Document as MongoKit_Document
+from flask.ext.mongokit import Document as MongoKit_Document
 from planlos.permissions import PermissionDenied
-from flaskext.login import UserMixin
+from flask.ext.login import UserMixin
 from planlos.extensions import db
 from types import NoneType
 

@@ -4,17 +4,19 @@ from flask import Blueprint, g, render_template, redirect, url_for
 from flask import current_app as app
 from flask import flash, request, session
 from planlos.extensions import db
-from flaskext.login import login_required
+from flask.ext.login import login_required
 from planlos.documents import Profile, User, Event, Group
 
-from flaskext.wtf import (Form, HiddenField,
-                          TextField, TextAreaField,
-                          required, BooleanField,
+from flask.ext.wtf import (Form, fields, widgets)
+from wtforms import (validators,TextField, TextAreaField,DateTimeField,
+                          FormField, HiddenField,
+                          TextField, FieldList,
+						  BooleanField,
                           PasswordField, SubmitField,
-                          Email, Required, ValidationError,
-                          DateTimeField, FormField,
-                          SelectField, URL, FloatField,
-                          Optional, EqualTo)
+                            ValidationError,
+                          SelectField, FloatField,
+                          )
+from wtforms.validators  import Required,EqualTo,Optional,URL,Email
 
 import datetime
 

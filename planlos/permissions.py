@@ -7,7 +7,7 @@
 # Eine Permission kann eine Rolle vorraussetzen
 # Eine Rolle kann sein z.b. Moderator, Authenticated User, Owner, Friend
 
-from flaskext.login import current_user
+from flask.ext.login import current_user
 
 
 class PermissionDenied(Exception):

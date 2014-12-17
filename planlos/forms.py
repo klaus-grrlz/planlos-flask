@@ -1,15 +1,15 @@
 # coding: utf-8
 from flask import current_app as app
-from flaskext.wtf import (Form, fields, widgets, HiddenField,
-                          TextField, TextAreaField,
-                          ListWidget, DateTimeField,
-                          FormField, HiddenInput,
-                          TextInput, FieldList,
-                          required, BooleanField,
+from flask.ext.wtf import (Form, fields, widgets)
+from wtforms import (validators,TextField, TextAreaField,DateTimeField,
+                          FormField, HiddenField,
+                          TextField, FieldList,
+						  BooleanField,
                           PasswordField, SubmitField,
-                          Email, Required, ValidationError,
-                          SelectField, URL, FloatField,
-                          Optional, EqualTo)
+                            ValidationError,
+                          SelectField, FloatField,
+                          )
+from wtforms.validators  import Required,EqualTo,Optional,URL,Email
 from documents import User, Group, Event, Profile
 import re
 import uuid
@@ -22,7 +22,7 @@ class Login_Form(Form):
     next = HiddenField()
     remember = BooleanField("Remember me")
     username = TextField("Username",
-                         validators=[ required(message="You must provide a username")])
+                         validators=[ Required(message="You must provide a username")])
     password = PasswordField("Password")
     submit = SubmitField("Login")
 
@@ -30,7 +30,7 @@ class Login_Form(Form):
 class Signup_Form(Form):
     next = HiddenField()
     username = TextField("Username",
-                         validators=[required(message="You must provide a username")])
+                         validators=[Required(message="You must provide a username")])
     password = PasswordField("Password",
                              validators=[Required()])
     password2 = PasswordField("Repeat Password",
@@ -89,7 +89,7 @@ def validate_date(form, field):
 
 
 class TagListField(fields.Field):
-    widget = HiddenInput()
+    widget = HiddenField()
 
     def _value(self):
         if self.data:
@@ -113,7 +113,7 @@ class TagListField(fields.Field):
 
 
 class Hidden_DateTimeField(fields.Field):
-    widget = HiddenInput()
+    widget = HiddenField()
 
     def _value(self):
         if self.data:

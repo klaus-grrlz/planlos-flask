@@ -1,9 +1,9 @@
 # coding: utf-8
 
 from . import Document
-from flaskext.login import UserMixin
+from flask.ext.login import UserMixin
 from planlos.passwordgen import Password_Generator
-from flaskext.mail import Message
+from flask.ext.mail import Message
 from planlos.extensions import mail, db
 from validators import email_validator
 from datetime import datetime

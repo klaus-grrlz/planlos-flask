@@ -2,11 +2,11 @@
 from flask import Blueprint, g, render_template, redirect, url_for, abort
 from flask import current_app as app
 from flask import flash, request, session
-from flaskext.mail import Message
+from flask.ext.mail import Message
 from planlos.forms import Login_Form, Signup_Form
 from planlos.documents import Profile, User
 from planlos.extensions import mail, db
-from flaskext.login import current_user, login_user, logout_user, login_required
+from flask.ext.login import current_user, login_user, logout_user, login_required
 from planlos.account_tools import request_user_account
 
 

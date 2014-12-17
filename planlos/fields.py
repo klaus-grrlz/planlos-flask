@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from flask import current_app as app
-from flaskext.wtf import TextField, TextInput
+from wtforms import TextField, BooleanField
 from dateutil.parser import parse as date_parser
 import datetime
 # Form Fields Special

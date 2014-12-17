@@ -5,7 +5,7 @@ from flask import current_app as app
 from planlos.forms import Location_Form
 from planlos.extensions import db
 from planlos.documents import Location
-from flaskext.login import login_required
+from flask.ext.login import login_required
 
 locations = Blueprint('locations', __name__)
 
