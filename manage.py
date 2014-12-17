@@ -98,7 +98,7 @@ if __name__ == "__main__":
         test()
     else:
         from flask import app
-        from flaskext.script import Shell, Server, Manager
+        from flask.ext.script import Shell, Server, Manager
 
         from planlos import create_app
         from planlos.config import Development
@@ -106,5 +106,5 @@ if __name__ == "__main__":
         app = create_app(Development())
         manager = Manager(app)
         manager.add_option('-c', '--config', dest='config', required=False)
-        setup(manager)
+        setup()
         manager.run()
