@@ -4,15 +4,20 @@ Planlos App using flask
 Rewrite of the current django-based planlos-app with Flask+MongoDB.
 
 
-Dependencies
+Dependencies / How to setup
 ------------
-* Flask
-* Flaskext: Login, Mail, MongoKit, Script, Testing, WTF, (Sijax)
-* mongokit
-* pymongo
-* nose + coverage.py
-* python-dateutil
-* running MongoDB
+
+* 	install python
+		sudo apt-get install python
+*	install pip module manager
+		sudo apt-get install pip
+*	install flask and external flask modules
+		sudo pip install flask-login flask-mail flask-mongokit flask-script flask-testing flask-wtf flask-sijax
+*	install other python modules
+		sudo pip install mongokit pymongo nose coverage python-dateutil
+*	install mongoDB database
+		sudo apt-get install mongodb
+
 
 
 Development
